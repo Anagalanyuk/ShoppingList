@@ -8,10 +8,6 @@ namespace ShoppingList
 		public MainForm()
 		{
 			InitializeComponent();
-			addButton.Enabled = false;
-			deleteButton.Enabled = false;
-			//downButton.Enabled = false;
-			//upButton.Enabled = false;
 		}
 
 		private void Add()
@@ -95,6 +91,22 @@ namespace ShoppingList
 			}
 			deleteButton.Enabled = true;
 			newProduct();
+		}
+
+		private void UpButton_Click(object sender, EventArgs e)
+		{
+			var clone = listProducts.Items[listProducts.SelectedIndex - 1];
+			listProducts.Items[listProducts.SelectedIndex - 1] = listProducts.Items[listProducts.SelectedIndex];
+			listProducts.Items[listProducts.SelectedIndex] = clone;
+			listProducts.SelectedIndex = listProducts.SelectedIndex - 1;
+		}
+
+		private void DownButton_Click(object sender, EventArgs e)
+		{
+			var clone = listProducts.Items[listProducts.SelectedIndex + 1];
+			listProducts.Items[listProducts.SelectedIndex + 1] = listProducts.Items[listProducts.SelectedIndex];
+			listProducts.Items[listProducts.SelectedIndex] = clone;
+			listProducts.SelectedIndex = listProducts.SelectedIndex + 1;
 		}
 	}
 }

@@ -49,6 +49,7 @@
 			// addButton
 			// 
 			this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.addButton.Enabled = false;
 			this.addButton.Location = new System.Drawing.Point(232, 305);
 			this.addButton.Name = "addButton";
 			this.addButton.Size = new System.Drawing.Size(75, 23);
@@ -67,6 +68,7 @@
 			this.upButton.TabIndex = 3;
 			this.upButton.Text = "Up";
 			this.upButton.UseVisualStyleBackColor = true;
+			this.upButton.Click += new System.EventHandler(this.UpButton_Click);
 			// 
 			// downButton
 			// 
@@ -78,11 +80,13 @@
 			this.downButton.TabIndex = 4;
 			this.downButton.Text = "Down";
 			this.downButton.UseVisualStyleBackColor = true;
+			this.downButton.Click += new System.EventHandler(this.DownButton_Click);
 			// 
 			// deleteButton
 			// 
 			this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.deleteButton.Enabled = false;
 			this.deleteButton.Location = new System.Drawing.Point(12, 333);
 			this.deleteButton.Name = "deleteButton";
 			this.deleteButton.Size = new System.Drawing.Size(295, 23);
