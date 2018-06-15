@@ -21,12 +21,23 @@ namespace ShoppingList
 			Add();
 		}
 
-		private void deleteButton_Click(object sender, EventArgs e)
+		private void DeleteButton_Click(object sender, EventArgs e)
 		{
 			if (listProducts.SelectedIndex >= 0)
 			{
 				listProducts.Items.RemoveAt(listProducts.SelectedIndex);
 			}
+		}
+
+		private void DownButton_Click(object sender, EventArgs e)
+		{
+			var clonChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex + 1);
+			listProducts.SetItemCheckState(listProducts.SelectedIndex + 1, listProducts.GetItemCheckState(listProducts.SelectedIndex));
+			listProducts.SetItemChecked(listProducts.SelectedIndex, clonChackeState);
+			var clone = listProducts.Items[listProducts.SelectedIndex + 1];
+			listProducts.Items[listProducts.SelectedIndex + 1] = listProducts.Items[listProducts.SelectedIndex];
+			listProducts.Items[listProducts.SelectedIndex] = clone;
+			listProducts.SelectedIndex = listProducts.SelectedIndex + 1;
 		}
 
 		private void MainForm_KeyDown(object sender, KeyEventArgs e)
@@ -40,13 +51,12 @@ namespace ShoppingList
 			}
 		}
 
-		private void nameProduct_TextChanged(object sender, EventArgs e)
+		private void NameProduct_TextChanged(object sender, EventArgs e)
 		{
-			newProduct();
-
+			NewProduct();
 		}
 
-		private void newProduct()
+		private void NewProduct()
 		{
 			for (int i = 0; i < nameProduct.Text.Length; ++i)
 			{
@@ -70,7 +80,7 @@ namespace ShoppingList
 			}
 		}
 
-		private void listProducts_SelectedIndexChanged(object sender, EventArgs e)
+		private void ListProducts_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			int index = listProducts.SelectedIndex;
 			if (listProducts.SelectedIndex > 0)
@@ -90,23 +100,18 @@ namespace ShoppingList
 				downButton.Enabled = false;
 			}
 			deleteButton.Enabled = true;
-			newProduct();
+			NewProduct();
 		}
 
 		private void UpButton_Click(object sender, EventArgs e)
 		{
+			var clonChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex - 1);
+			listProducts.SetItemCheckState(listProducts.SelectedIndex - 1, listProducts.GetItemCheckState(listProducts.SelectedIndex));
+			listProducts.SetItemChecked(listProducts.SelectedIndex, clonChackeState);
 			var clone = listProducts.Items[listProducts.SelectedIndex - 1];
 			listProducts.Items[listProducts.SelectedIndex - 1] = listProducts.Items[listProducts.SelectedIndex];
 			listProducts.Items[listProducts.SelectedIndex] = clone;
 			listProducts.SelectedIndex = listProducts.SelectedIndex - 1;
-		}
-
-		private void DownButton_Click(object sender, EventArgs e)
-		{
-			var clone = listProducts.Items[listProducts.SelectedIndex + 1];
-			listProducts.Items[listProducts.SelectedIndex + 1] = listProducts.Items[listProducts.SelectedIndex];
-			listProducts.Items[listProducts.SelectedIndex] = clone;
-			listProducts.SelectedIndex = listProducts.SelectedIndex + 1;
 		}
 	}
 }

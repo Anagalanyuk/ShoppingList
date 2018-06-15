@@ -44,7 +44,7 @@
 			this.nameProduct.Name = "nameProduct";
 			this.nameProduct.Size = new System.Drawing.Size(214, 20);
 			this.nameProduct.TabIndex = 1;
-			this.nameProduct.TextChanged += new System.EventHandler(this.nameProduct_TextChanged);
+			this.nameProduct.TextChanged += new System.EventHandler(this.NameProduct_TextChanged);
 			// 
 			// addButton
 			// 
@@ -93,7 +93,7 @@
 			this.deleteButton.TabIndex = 5;
 			this.deleteButton.Text = "Delete";
 			this.deleteButton.UseVisualStyleBackColor = true;
-			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+			this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
 			// 
 			// listProducts
 			// 
@@ -105,7 +105,7 @@
 			this.listProducts.Name = "listProducts";
 			this.listProducts.Size = new System.Drawing.Size(394, 289);
 			this.listProducts.TabIndex = 7;
-			this.listProducts.SelectedIndexChanged += new System.EventHandler(this.listProducts_SelectedIndexChanged);
+			this.listProducts.SelectedIndexChanged += new System.EventHandler(this.ListProducts_SelectedIndexChanged);
 			// 
 			// MainForm
 			// 
