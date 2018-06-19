@@ -16,6 +16,7 @@ namespace ShoppingList
 			listProducts.Items.Add(nameProduct.Text);
 			nameProduct.Clear();
 		}
+
 		private void addButton_Click(object sender, EventArgs e)
 		{
 			Add();
