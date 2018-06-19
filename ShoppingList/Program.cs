@@ -13,13 +13,7 @@ namespace ShoppingList
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new MainForm());
-
-			MainForm view = new MainForm();
-			ShoppingListService service = new ShoppingListService();
-
-			ShoppingListPresenter presenter = new ShoppingListPresenter(view, service);
-			presenter.Run();
+			Application.Run(new MainForm());
 		}
 	}
 }
