@@ -27,6 +27,7 @@ namespace ShoppingList
 			if (listProducts.SelectedIndex >= 0)
 			{
 				listProducts.Items.RemoveAt(listProducts.SelectedIndex);
+				deleteButton.Enabled = false;
 			}
 		}
 
