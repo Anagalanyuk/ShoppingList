@@ -107,7 +107,7 @@
 			this.listProducts.TabIndex = 7;
 			this.listProducts.SelectedIndexChanged += new System.EventHandler(this.ListProducts_SelectedIndexChanged);
 			// 
-			// MainForm
+			// ShoppingListView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,9 +119,9 @@
 			this.Controls.Add(this.addButton);
 			this.Controls.Add(this.nameProduct);
 			this.KeyPreview = true;
-			this.Name = "MainForm";
+			this.Name = "ShoppingListView";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form1";
+			this.Text = "ShoppindList";
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();

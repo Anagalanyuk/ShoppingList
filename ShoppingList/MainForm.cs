@@ -31,9 +31,9 @@ namespace ShoppingList
 
 		private void DownButton_Click(object sender, EventArgs e)
 		{
-			var clonChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex + 1);
+			var cloneChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex + 1);
 			listProducts.SetItemCheckState(listProducts.SelectedIndex + 1, listProducts.GetItemCheckState(listProducts.SelectedIndex));
-			listProducts.SetItemChecked(listProducts.SelectedIndex, clonChackeState);
+			listProducts.SetItemChecked(listProducts.SelectedIndex, cloneChackeState);
 			var clone = listProducts.Items[listProducts.SelectedIndex + 1];
 			listProducts.Items[listProducts.SelectedIndex + 1] = listProducts.Items[listProducts.SelectedIndex];
 			listProducts.Items[listProducts.SelectedIndex] = clone;
@@ -105,9 +105,9 @@ namespace ShoppingList
 
 		private void UpButton_Click(object sender, EventArgs e)
 		{
-			var clonChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex - 1);
-			listProducts.SetItemCheckState(listProducts.SelectedIndex - 1, listProducts.GetItemCheckState(listProducts.SelectedIndex));
-			listProducts.SetItemChecked(listProducts.SelectedIndex, clonChackeState);
+			var cloneChackeState = listProducts.GetItemChecked(listProducts.SelectedIndex - 1);
+			listProducts.SetItemChecked(listProducts.SelectedIndex - 1, listProducts.GetItemChecked(listProducts.SelectedIndex));
+			listProducts.SetItemChecked(listProducts.SelectedIndex, cloneChackeState);
 			var clone = listProducts.Items[listProducts.SelectedIndex - 1];
 			listProducts.Items[listProducts.SelectedIndex - 1] = listProducts.Items[listProducts.SelectedIndex];
 			listProducts.Items[listProducts.SelectedIndex] = clone;
