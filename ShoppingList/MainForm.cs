@@ -5,6 +5,8 @@ namespace ShoppingList
 {
 	public partial class MainForm : Form
 	{
+		private bool isSelectedIndex = false;
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -15,6 +17,10 @@ namespace ShoppingList
 			nameProduct.Text = nameProduct.Text.Trim();
 			listProducts.Items.Add(nameProduct.Text);
 			nameProduct.Clear();
+			if (isSelectedIndex && listProducts.SelectedIndex < listProducts.Items.Count - 1)
+			{
+				downButton.Enabled = true;
+			}
 		}
 
 		private void AddButton_Click(object sender, EventArgs e)
@@ -30,6 +36,8 @@ namespace ShoppingList
 				deleteButton.Enabled = false;
 				upButton.Enabled = false;
 				downButton.Enabled = false;
+				isSelectedIndex = false;
+				listProducts.SelectedIndex = -1;
 			}
 		}
 
@@ -86,24 +94,30 @@ namespace ShoppingList
 
 		private void ListProducts_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			if (listProducts.SelectedIndex == listProducts.Items.Count - 1)
+			{
+				isSelectedIndex = true;
+			}
 			int index = listProducts.SelectedIndex;
 			if (listProducts.SelectedIndex > 0)
 			{
 				upButton.Enabled = true;
+				deleteButton.Enabled = true;
+
 			}
 			else
 			{
 				upButton.Enabled = false;
 			}
-			if (listProducts.SelectedIndex < listProducts.Items.Count - 1)
+			if (listProducts.SelectedIndex < listProducts.Items.Count - 1 && listProducts.SelectedIndex > 0)
 			{
 				downButton.Enabled = true;
+				deleteButton.Enabled = true;
 			}
 			else
 			{
 				downButton.Enabled = false;
 			}
-			deleteButton.Enabled = true;
 			NewProduct();
 		}
 
