@@ -94,30 +94,33 @@ namespace ShoppingList
 
 		private void ListProducts_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (listProducts.SelectedIndex == listProducts.Items.Count - 1)
+			if (listProducts.SelectedIndex >= 0)
 			{
-				isSelectedIndex = true;
-			}
-			if (listProducts.SelectedIndex > 0)
-			{
-				upButton.Enabled = true;
-				deleteButton.Enabled = true;
+				if (listProducts.SelectedIndex == listProducts.Items.Count - 1)
+				{
+					isSelectedIndex = true;
+				}
+				if (listProducts.SelectedIndex > 0)
+				{
+					upButton.Enabled = true;
+					deleteButton.Enabled = true;
 
+				}
+				else
+				{
+					upButton.Enabled = false;
+				}
+				if (listProducts.SelectedIndex < listProducts.Items.Count - 1)
+				{
+					downButton.Enabled = true;
+					deleteButton.Enabled = true;
+				}
+				else
+				{
+					downButton.Enabled = false;
+				}
+				NewProduct();
 			}
-			else
-			{
-				upButton.Enabled = false;
-			}
-			if (listProducts.SelectedIndex < listProducts.Items.Count - 1)
-			{
-				downButton.Enabled = true;
-				deleteButton.Enabled = true;
-			}
-			else
-			{
-				downButton.Enabled = false;
-			}
-			NewProduct();
 		}
 
 		private void UpButton_Click(object sender, EventArgs e)
