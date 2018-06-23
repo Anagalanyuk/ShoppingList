@@ -98,7 +98,6 @@ namespace ShoppingList
 			{
 				isSelectedIndex = true;
 			}
-			int index = listProducts.SelectedIndex;
 			if (listProducts.SelectedIndex > 0)
 			{
 				upButton.Enabled = true;
@@ -109,7 +108,7 @@ namespace ShoppingList
 			{
 				upButton.Enabled = false;
 			}
-			if (listProducts.SelectedIndex < listProducts.Items.Count - 1 && listProducts.SelectedIndex > 0)
+			if (listProducts.SelectedIndex < listProducts.Items.Count - 1)
 			{
 				downButton.Enabled = true;
 				deleteButton.Enabled = true;
