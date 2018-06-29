@@ -38,8 +38,8 @@
 			// 
 			// nameProduct
 			// 
-			this.nameProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.nameProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.nameProduct.Location = new System.Drawing.Point(12, 307);
 			this.nameProduct.Name = "nameProduct";
 			this.nameProduct.Size = new System.Drawing.Size(214, 20);
@@ -84,8 +84,8 @@
 			// 
 			// deleteButton
 			// 
-			this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.deleteButton.Enabled = false;
 			this.deleteButton.Location = new System.Drawing.Point(12, 333);
 			this.deleteButton.Name = "deleteButton";
@@ -97,9 +97,9 @@
 			// 
 			// listProducts
 			// 
-			this.listProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.listProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.listProducts.FormattingEnabled = true;
 			this.listProducts.Location = new System.Drawing.Point(12, 11);
 			this.listProducts.Name = "listProducts";
@@ -137,4 +137,3 @@
 		private System.Windows.Forms.CheckedListBox listProducts;
 	}
 }
-
