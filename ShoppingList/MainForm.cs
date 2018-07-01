@@ -104,7 +104,6 @@ namespace ShoppingList
 				{
 					upButton.Enabled = true;
 					deleteButton.Enabled = true;
-
 				}
 				else
 				{
